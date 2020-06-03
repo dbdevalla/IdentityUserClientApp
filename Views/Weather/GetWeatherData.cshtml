@@ -1,0 +1,19 @@
+﻿@model IEnumerable<IdentityUserClientApp.Models.WeatherForecast>
+
+
+@{
+    ViewData["Title"] = "GetWeatherData";
+}
+
+<h1>Weather Info</h1>
+
+<table class="table">
+    @if(Model !=null)
+    {
+        <thead><tr><td>Date</td><td>Temperature C</td><td> Temperature F</td><td>Summary</td></tr></thead>
+        @foreach (var m in Model)
+        {
+            <tr><td>@m.Date.ToShortDateString()</td><td>@m.TemperatureC.</td><td>@m.TemperatureF.</td><td>@m.Summary</td></tr>
+        }
+    }
+</table>
